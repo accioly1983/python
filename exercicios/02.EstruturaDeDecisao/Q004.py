@@ -6,7 +6,7 @@ letra = entrada[0:1]
 
 if letra in 'aeiou':
     print(f'Vogal - {letra}')
-elif letra in 'bcdfghjlmnpqrstvxzw':
+elif letra in 'bcdfghjklmnpqrstvxzw':
     print(f'Consoante - {letra}')
 else:
     print(f'Caracter Inválido - {letra}')

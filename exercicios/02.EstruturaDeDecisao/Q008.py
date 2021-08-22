@@ -6,7 +6,7 @@ produto_2 = float(input('Informe quanto custa o 2 produto: '))
 produto_3 = float(input('Informe quanto custa o 3 produto: '))
 
 menor = 0
-if produto_1 < produto_2 and produto_1 < produto_3:
+if produto_1 < produto_2 < produto_3:
     menor = produto_1
 elif produto_2 < produto_3:
     menor = produto_2
