@@ -11,22 +11,22 @@ arredonde os valores para cima, isto é, considere latas cheias. '''
 
 import math
 
-ex17_area = float(
+area = float(
     input('Informe o tamanho metros quadrados da area a ser pintada: '))
-ex17_qtd_litros = (ex17_area/6)*1.10
-ex17_total_latas_18litros = math.ceil(ex17_qtd_litros/18)
-ex17_total_galoes_3_6litros = math.ceil(ex17_qtd_litros/3.6)
+qtd_litros = (area/6)*1.10
+total_latas_18litros = math.ceil(qtd_litros/18)
+total_galoes_3_6litros = math.ceil(qtd_litros/3.6)
 
 # Otimizado
-ex17_total_latas_18litros_otimizado = math.floor(ex17_qtd_litros/18)
-ex17_total_litros_restantes = ex17_qtd_litros % 18
-ex17_total_galoes_3_6litros_otimizado = math.ceil(
-ex17_total_litros_restantes/3.6)
+total_latas_18litros_otimizado = math.floor(qtd_litros/18)
+total_litros_restantes = qtd_litros % 18
+total_galoes_3_6litros_otimizado = math.ceil(
+total_litros_restantes/3.6)
 
 
-print(f'Area {ex17_area}')
+print(f'Area {area}')
 print(
-    f'comprar apenas latas de 18 litros: {ex17_total_latas_18litros} -- Valor {ex17_total_latas_18litros*80.00}')
+    f'comprar apenas latas de 18 litros: {total_latas_18litros} -- Valor {total_latas_18litros*80.00}')
 print(
-    f'comprar apenas galões de 3,6 litros: {ex17_total_galoes_3_6litros} -- Valor{ex17_total_galoes_3_6litros*25.00} ')
-print(f'lata(s) {ex17_total_latas_18litros_otimizado} de 18 litro(s) e {ex17_total_galoes_3_6litros_otimizado} gal(ão|ões) de 3,6 litros. -- Valor {((ex17_total_latas_18litros_otimizado*80.00)+(ex17_total_galoes_3_6litros_otimizado*25.00))} ')
+    f'comprar apenas galões de 3,6 litros: {total_galoes_3_6litros} -- Valor{total_galoes_3_6litros*25.00} ')
+print(f'lata(s) {total_latas_18litros_otimizado} de 18 litro(s) e {total_galoes_3_6litros_otimizado} gal(ão|ões) de 3,6 litros. -- Valor {((total_latas_18litros_otimizado*80.00)+(total_galoes_3_6litros_otimizado*25.00))} ')
