@@ -3,7 +3,7 @@ Conforme a letra escrever: F - Feminino, M - Masculino, Sexo Inválido. '''
 
 entrada = input('informe uma letra:')
 
-letra = entrada[:1]
+letra = entrada[:1].upper()
 
 if letra == 'F':
     print(f'F - Feminino -> {letra}')
