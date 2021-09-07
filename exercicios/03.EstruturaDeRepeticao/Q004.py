@@ -6,8 +6,8 @@ população do país B, mantidas as taxas de crescimento. '''
 
 
 
-populacao_a = 80000
-populacao_b = 200000
+populacao_a = 80_000
+populacao_b = 200_000
 
 qtd_anos = 0
 while populacao_a <populacao_b:
@@ -16,4 +16,4 @@ while populacao_a <populacao_b:
     qtd_anos+=1
 
 
-print(f'População A {populacao_a} iguala ou supera população B {populacao_b} em {qtd_anos} anos!')
+print(f'População A {int(populacao_a)} iguala ou supera população B {int(populacao_b)} em {qtd_anos} anos!')

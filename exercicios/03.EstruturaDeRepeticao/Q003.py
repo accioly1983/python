@@ -20,42 +20,46 @@ while len(nome) < 3:
 while True:
     try:
        idade = int(input('Informe uma idade entre 0 e 150: '))
-       while  idade<=0 or idade>150:
-           idade = int(input(f'{idade} Opção Inválida! Informe uma idade entre 0 e 150: '))           
-       break
     except ValueError:
-       print(f'{idade} Opção Inválida! Informe uma idade entre 0 e 150! ')
+       print(f'Caro usuário entrar com um valor inteiro entre 0 e 150! ')
+    else:
+        if not (0<idade<150):
+            print(f'Idade Inválida {idade}! Informe uma idade entre 0 e 150: ')
+        else:
+            break
 
 while True:
     try:
-       salario = float(input('Informe seu salário: '))
-       while  salario<=0 :
-           salario = float(input(f'{salario} Opção Inválida! Salário tem que ser maior que 0: '))           
-       break
+       salario = float(input('Informe seu salário: '))     
     except ValueError:
-       print(f'{salario} Opção Inválida! Salário tem que ser maior que 0! ')
+       print(f'Caro usuário o valor informado deve ser um número real maior que 0: ')
+    else:
+        if not (salario>0):
+            print(f'Salário Inválido: R$ {salario} ! O salário tem que ser maior que 0! ')
+        else:
+            break
 
 
-while True:
-    try:
-       sexo = input('Informe seu sexo (M-Masculino, F-Feminino ou I-Indefinido: ')
-       while  len(sexo)>2 or sexo not in ('SsMmIi') :
-           sexo = input(f'{sexo} Sexo Inválido!Tente novamnete! Informe seu sexo (M-Masculino, F-Feminino ou I-Indefinido: ')
-       break
-    except ValueError:
-       print(f'{sexo} Sexo Inválido!Tente novamnete! Sexo Permitido (M-Masculino, F-Feminino ou I-Indefinido: ')
 
 
 while True:
     try:
-       estado_civil = input('Informe seu estado civil (S-Solteiro(a), C-Casado(a), D-Divorciado(a) ou V-viuvo(a)): ')
-       while  len(estado_civil)>2 or estado_civil not in ('SsCcDdVv') :
-           estado_civil = input(f'{estado_civil} Sexo Inválido!Tente novamnete! Informe seu estado civil (S-Solteiro(a), C-Casado(a), D-Divorciado(a) ou V-viuvo(a)): ')
-       break
-    except ValueError:
-       print(f'{estado_civil} Sexo Inválido!Tente novamnete! Informe seu estado civil (S-Solteiro(a), C-Casado(a), D-Divorciado(a) ou V-viuvo(a)): ')
+       sexo = input('Informe seu sexo (M-Masculino, F-Feminino ou I-Indefinido): ')
+    finally:
+        if len(sexo)>2 or sexo not in ('SsMmIi'):
+            print(f'Sexo Inválido!Tente novamnete! Caro usário vc informar uma das opções a seguir (M-Masculino, F-Feminino ou I-Indefinido) ')       
+        else:
+            break
 
 
+while True:
+    try:
+       estado_civil = input('Informe seu estado civil (S-Solteiro(a), C-Casado(a), D-Divorciado(a) ou V-viuvo(a)): ')       
+    finally:
+       if len(estado_civil)>2 or estado_civil not in ('SsCcDdVv'):
+           print(f'Sexo informado é inválido: {estado_civil} ! Tente novamnete!')
+       else:
+           break
 
 print(f'--------------DADOS COLETADOS-------------')
 print(f'Nome:{nome}')
